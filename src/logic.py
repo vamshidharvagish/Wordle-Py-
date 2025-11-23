@@ -142,7 +142,7 @@ def isValid(word):
 
 # def main():
 #     print("Enter a 5 letter word: ")
-    i = 0
+    # i = 0
     # while (i < 6):
     #     word = input()
     #     if len(word) != 5:
@@ -159,3 +159,4 @@ def isValid(word):
 
 # if __name__ == "__main__":
 #     main()
+
