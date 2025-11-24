@@ -24,7 +24,8 @@ stats = logic.load_stats()
 display.init_screen()
 indicators = display.init_indicators()
 
-GUESSABLE_WORDS, SECRET = logic.get_guessable_words()
+GUESSABLE_WORDS, _ = logic.get_guessable_words()
+_, SECRET = logic.get_random_word()
 
 
 def add_letter_to_guess(key_pressed):
