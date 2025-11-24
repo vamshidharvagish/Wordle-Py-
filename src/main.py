@@ -1,4 +1,3 @@
-import ctypes
 import pygame
 import sys
 from constants import *
@@ -41,9 +40,6 @@ def add_letter_to_guess(key_pressed):
         current_alphabet_bg_x += ALPHABET_X_DISTANCE
         guesses[guess_count].append(new_letter)
         current_guess.append(new_letter)
-        # for guess in guesses:
-        #     for letter in guess:
-        #         letter.draw()
         new_letter.draw()
 
 

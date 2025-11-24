@@ -67,13 +67,9 @@ def draw_play_again(stats, SECRET):
 
     pygame.draw.rect(DISPLAY, WHITE, (0, 600, WIDTH, 300))
 
-    # play_again_text = PLAY_AGAIN_FONT.render("Press ENTER to Play Again!", True, BLACK)
-    # play_again_rect = play_again_text.get_rect(center=(WIDTH / 2, 850))
-
     word_was_text = PLAY_AGAIN_FONT.render(f"The word was {SECRET}!", True, BLACK)
     word_was_rect = word_was_text.get_rect(center=(WIDTH / 2, 630))
     DISPLAY.blit(word_was_text, word_was_rect)
-    # DISPLAY.blit(play_again_text, play_again_rect)
 
     # --- Display Statistics ---
     wins_text = STATS_FONT.render(f"Wins: {stats['wins']}", True, BLACK)
@@ -99,11 +95,9 @@ def draw_play_again(stats, SECRET):
     spacing = 85
 
     for i in range(1, 7):
-        # Render string like "1: 0" or "2: 5"
         dist_text = STATS_FONT.render(
             f"{i}: {stats['guess_distribution'][str(i)]}", True, GREY
         )
-        # Place them side by side
         DISPLAY.blit(dist_text, (start_x + (i - 1) * spacing, 780))
 
     play_again_text = PLAY_AGAIN_FONT.render("Press ENTER to Play Again!", True, BLACK)
@@ -118,42 +112,3 @@ def reset_display(indicators):
     for indicator in indicators:
         indicator.bg_colour = BORDER
         indicator.draw()
-
-
-# def create_new_letter():
-#     global current_guess_string, current_alphabet_bg_x
-
-#     current_guess_string += key_pressed
-#     new_letter = Letter(
-#         key_pressed,
-#         (current_alphabet_bg_x, guess_count * 100 + ALPHABET_Y_DISTANCE),
-#     )
-#     current_alphabet_bg_x += ALPHABET_X_DISTANCE
-#     guesses[guess_count].append(new_letter)
-#     current_guess.append(new_letter)
-#     for guess in guesses:
-#         for letter in guess:
-#             letter.draw()
-
-# while True:
-#     for event in pygame.event.get():
-#         if event.type == pygame.QUIT:
-#             pygame.quit()
-#             sys.exit()
-
-#         if event.type == pygame.KEYDOWN:
-#             if event.key == pygame.K_RETURN:
-#                 if game_result != "":
-#                     reset()
-#                 else:
-#                     if isValid(current_guess_string):
-#                         check_guess(current_guess)
-
-#             elif event.key == pygame.K_BACKSPACE:
-#                 if len(current_guess_string) > 0:
-#                     delete_letter()
-#             else:
-#                 key_pressed = event.unicode.upper()
-#                 if key_pressed in "QWERTYUIOPASDFGHJKLZXCVBNM" and key_pressed != "":
-#                     if len(current_guess_string) < 5:
-#                         create_new_letter()
