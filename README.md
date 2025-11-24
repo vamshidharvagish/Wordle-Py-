@@ -14,9 +14,9 @@ Wordle-Py is a Python-based clone of the popular Wordle word-guessing game. It o
 
 ## Authors
 
-- Amogh Gurudatta
-- Aryan Sujay
-- Vamshidhar V
+- Amogh Gurudatta [BC2025007]
+- Aryan Sujay [IC2025009]
+- Vamshidhar V [IC2025030]
 
 ## Concepts and Libraries Used
 
